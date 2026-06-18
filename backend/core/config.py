@@ -20,7 +20,7 @@ class Settings(BaseSettings):
 
     # Gemini AI
     GEMINI_API_KEY: str = ""
-    GEMINI_MODEL: str = "gemini-1.5-flash"   # free-tier friendly
+    GEMINI_MODEL: str = "gemini-2.0-flash"   # free-tier friendly
 
     # Stripe
     STRIPE_SECRET_KEY: str = ""

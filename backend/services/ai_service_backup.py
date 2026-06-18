@@ -1,6 +1,6 @@
 """
 AI Service — Google Gemini API for all resume intelligence tasks.
-Uses gemini-2.0-flash (free tier) by default; switch to gemini-1.5-pro for higher quality.
+Uses gemini-1.5-flash (free tier) by default; switch to gemini-1.5-pro for higher quality.
 """
 import json
 import re
