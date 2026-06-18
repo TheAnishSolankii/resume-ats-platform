@@ -187,7 +187,9 @@ function AuthView({ onAuth }) {
       localStorage.setItem("iq_refresh_token", data.refresh_token);
       onAuth(data.user);
     } catch (e) {
-      setErr(e.response?.data?.detail || "Something went wrong. Try again.");
+      const detail = e.response?.data?.detail;
+      if (Array.isArray(detail)) setErr(detail.map(d => d.msg).join(", "));
+      else setErr(detail || "Something went wrong. Try again.");
     }
     setLoading(false);
   };
