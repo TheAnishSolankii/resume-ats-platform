@@ -10,7 +10,7 @@ A production-ready SaaS platform for AI-driven resume analysis, ATS scoring, and
 | Backend | FastAPI (Python 3.12) |
 | Database | PostgreSQL 16 |
 | Cache | Redis 7 |
-| AI | OpenAI GPT-4o / Claude API |
+| AI | Google Gemini 1.5 Flash |
 | Payments | Stripe |
 | Proxy | Nginx |
 | Containers | Docker + Docker Compose |
@@ -133,7 +133,7 @@ See `.env.example` for full reference. Required:
 
 ```env
 SECRET_KEY=<random 32+ chars>
-OPENAI_API_KEY=sk-...
+GEMINI_API_KEY=AIza...
 STRIPE_SECRET_KEY=sk_live_...
 STRIPE_WEBHOOK_SECRET=whsec_...
 ```
