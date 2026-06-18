@@ -90,9 +90,8 @@ async def me(current_user: User = Depends(get_current_user)):
 
 
 def _issue_tokens(user: User, request: Request, db: Session) -> dict:
-    access = create_access_token({"sub": user.id})
-    refresh = create_refresh_token({"sub": user.id})
-
+   access = create_access_token({"sub": str(user.id)})
+refresh = create_refresh_token({"sub": str(user.id)})
     session = UserSession(
         user_id=user.id,
         refresh_token=refresh,
